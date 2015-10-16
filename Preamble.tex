@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+
+%shrink white spaces around sections
+\usepackage[compact]{titlesec} 
+
+% titlesec package reformat section, subsection, etc. headings to be std font size
+\titleformat*{\section}{\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+\titleformat*{\paragraph}{\bfseries}
+\titleformat*{\subparagraph}{\bfseries}
+
+% for sub and super script in text mode
+\usepackage{fixltx2e}
+
+%\usepackage{fontspec} % Does not work with PDF Latex
+%\setmainfont{Times New Roman}
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+%set caption size
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+%scriptsize or footnotesize or small or normalsize or large or Large
+
+%for proper representation of numbers with units 
+\usepackage{siunitx}
+
+% No page numbering
+\pagestyle{empty}
+
+% Allows text wrapping around figures
+\usepackage{wrapfig}
+
+% 1 inch margin
+\usepackage[margin=1in]{geometry}
+
+% so that \toprule \bottomrule in tables work
+\usepackage{booktabs} 
+
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+
+%double spaceing... 
+\usepackage{setspace}
+\doublespacing   %Choose between \doublespacing \singlespacing \onehalfspacing or \setstretch{1.8}
+
+%another way to acheive double spacing, but does not switch off durring table environment.
+%\renewcommand{\baselinestretch}{2}
+
+%for \medspace, \thickspace, \negmedspace, and \negthickspace
+\usepackage{amsmath}
+
+%for \varnothing
+\usepackage{amssymb} 
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+
+
+
+%\newif\ifpdf
+%\ifx\pdfoutput\undefined
+%\pdffalse % we are not running PDFLaTeX
+%\else
+%\pdfoutput=1 % we are running PDFLaTeX
+%\pdftrue
+%\fi
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+%\title{A LaTeX Article}
+%\author{  }
+%\date{2014-02-01}
+
